@@ -1,0 +1,68 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 0px;
+    background-color: black;
+    overflow: hidden;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#canvas {
+    position: relative;
+    margin: 10vw;
+}
+
+.chunk {
+    height: calc(16 * 64px);
+    width: calc(16 * 64px);
+    position: absolute;
+    /* border: 1px solid red; */
+}
+
+#player {
+    width: 64px;
+    height: 64px;
+    background-image: url(/sprites/player/player-down.png);
+    background-size: cover;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    transition: top .2s, left .2s;
+}
+
+.tile {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+}
+
+.wall {
+    background-image: url(/sprites/tiles/wall.png);
+}
+
+.wall-back {
+    background-image: url(/sprites/tiles/wall-back.png);
+}
+
+.grass {
+    background-image: url(/sprites/tiles/grass.png);
+}
+
+.sand {
+    background-image: url(/sprites/tiles/sand.png);
+}
+
+.bush {
+    background-image: url(/sprites/bush.png);
+}
